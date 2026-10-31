@@ -1,0 +1,115 @@
+.story-section {
+  position: relative;
+  min-height: 100vh;
+  box-sizing: border-box;
+  background: linear-gradient(to right, #0a1128 50%, #1e2a44 100%);
+  padding: 6rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 8vw;
+}
+
+.text-section {
+  margin-top: 40px;
+}
+
+.his-story {
+  font-family: "jost", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: #e8b830;
+}
+
+.title {
+  color: #f7eee2;
+  font-family: "cormorant", serif;
+  font-size: clamp(1.8rem, 3vw, 3rem);
+  letter-spacing: 0.05em;
+  margin: 1rem 0 1.6rem;
+}
+
+.title::first-letter {
+  text-transform: capitalize;
+}
+
+.text-section p {
+  margin-top: 40px;
+  color: #f7eee2;
+  font-family: "cormorant", serif;
+  font-size: clamp(1rem, 1.4vw, 1.3rem);
+  max-width: 700px;
+}
+
+.text-section p:first-of-type::first-letter {
+  font-size: 4rem;
+  float: left;
+  line-height: 0.9;
+  margin-right: 0.5rem;
+  color: #f5b82e;
+}
+
+.text-section blockquote {
+  font-style: italic;
+  font-size: clamp(1rem, 1.4vw, 1.3rem);
+  margin-left: 0;
+  margin-top: 40px;
+  padding-left: 1rem;
+  border-left: 3px solid #f5b82e;
+  color: #f7eee2;
+}
+
+.pic-section {
+  margin-top: 30px;
+  align-items: center;
+}
+
+.pic-section img {
+  width: 25vw;
+  max-width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  border: 0.2rem solid #e8b830;
+  transition:
+    transform 0.5s,
+    box-shadow 0.5s;
+}
+
+.pic-section img:hover {
+  box-shadow: 0 0 40px rgba(245, 184, 46, 0.35);
+  transform: scale(1.05);
+}
+
+@media (max-width: 1000px) {
+  .story-section {
+    flex-direction: column;
+    padding: 2rem;
+    gap: 2rem;
+  }
+  .text-section {
+    margin-top: 0;
+  }
+
+  .pic-section {
+    margin-top: 0;
+  }
+
+  .pic-section img {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .text-section p:first-of-type::first-letter {
+    font-size: 3rem;
+  }
+}
+
+/* 
+ #f7eee2 text
+ #eee5d1 beige
+ #0a1128 blue
+ #f5b82e yellow
+  font-family: "jost", sans-serif;
+  font-family: "cormorant", serif;
+   */

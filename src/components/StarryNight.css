@@ -1,0 +1,118 @@
+.StarryNight-section {
+  position: relative;
+  min-height: 100vh;
+  box-sizing: border-box;
+  background: linear-gradient(to right, #0a1128 50%, #1e2a44 100%);
+  padding: 6rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 8vw;
+  overflow: clip;
+  
+}
+
+.StarryNight-text-section {
+  margin-top: 40px;
+}
+
+.famous-painting {
+  font-family: "jost", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: #e8b830;
+}
+
+.StarryNight-title {
+  color: #f7eee2;
+  font-family: "cormorant", serif;
+  font-size: clamp(1.8rem, 3vw, 3rem);
+  letter-spacing: 0.05em;
+  margin: 1rem 0 1.6rem;
+}
+
+.StarryNight-title::first-letter {
+  text-transform: capitalize;
+}
+
+.StarryNight-text-section p {
+  margin-top: 40px;
+  color: #f7eee2;
+  font-family: "cormorant", serif;
+  font-size: clamp(1rem, 1.4vw, 1.3rem);
+  max-width: 700px;
+}
+
+.StarryNight-text-section blockquote {
+  font-style: italic;
+  font-size: clamp(1rem, 1.4vw, 1.3rem);
+  margin-left: 0;
+  margin-top: 40px;
+  color: #f5b82e;
+  margin-bottom: 20px;
+}
+
+.StarryNight-pic-section {
+  position: relative;
+  width: 35vw;
+  flex-shrink: 0;
+  margin-top: 30px;
+  container-type: inline-size;
+  transition: transform 0.5s;
+}
+
+.StarryNight-pic-section .starry-night-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 2;
+}
+
+.StarryNight-pic-section::before {
+  content: "";
+  position: absolute;
+  inset: -1cqw;
+  border: 0.01rem solid #e8b830;
+  transform: translate(4cqw, 2cqw);
+}
+
+.StarryNight-pic-section::after {
+  content: "";
+  position: absolute;
+  inset: -1cqw;
+  border: 0.01rem solid #eddba9;
+  transform: translate(-4cqw, -2cqw);
+}
+
+.StarryNight-pic-section .brush-image img {
+  max-width: none;
+  display: block;
+  width: 150%;
+  height: auto;
+  position: absolute;
+  z-index: 1;
+  top: -10%;
+  left: -25%;
+  transform: rotate(40deg);
+}
+
+@media (max-width: 1000px) {
+  .StarryNight-section {
+    flex-direction: column;
+    padding: 2rem 2rem 5rem; 
+    gap: 2rem;
+  }
+
+  .StarryNight-text-section {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  .StarryNight-pic-section {
+    width: 75%; 
+    max-width: 500px;
+    margin-top: 0;
+  }
+}

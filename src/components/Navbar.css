@@ -1,0 +1,128 @@
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 10;
+
+  background-color: transparent;
+  color: #eee5d1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.navbar-left {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.4rem, 2vw, 2.4rem);
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.navbar-right {
+  font-family: "Jost", sans-serif;
+  font-size: clamp(0.75rem, 1vw, 1.1rem);
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  gap: 2.4rem;
+  display: flex;
+}
+
+.navbar-right a {
+  text-decoration: none;
+  color: inherit; /* 3shan yakhod color l navbar */
+  position: relative;
+}
+
+.navbar-right a::after {
+  content: "";
+  position: absolute;
+  background-color: #e8b830;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  transform: scaleX(
+    0
+  ); /* byshghr l width bta3 l kht lhd ma ykhtfy yb2a ka2n no width  */
+  transform-origin: left; /* byhdd l line ybd2 mnen 3shan lma yzhr */
+  transition: transform 0.5s;
+}
+
+.navbar-right a:hover::after {
+  transform: scaleX(1);
+}
+
+.navbar-toggle {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  html {
+    scroll-padding-top: 4rem; 
+  }
+
+  .navbar {
+    position: fixed;
+    padding: 0.6rem 0.8rem;
+    background-color: rgba(14, 22, 48, 0.879);
+    backdrop-filter: blur(14px);
+  }
+
+  .navbar-toggle {
+    display: block;
+    z-index: 20;
+    background: transparent;
+    border: none;
+    color: #eee5d1;
+    font-size: 1.4rem;
+    cursor: pointer;
+  }
+
+  .navbar-right {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 62vw;
+    max-width: 260px;
+    height: 100vh;
+    box-sizing: border-box;
+    padding: 5rem 1.5rem 2rem;
+    z-index: 15;
+
+    flex-direction: column;
+    gap: 0;
+    font-size: 0.85rem;
+
+    background-color: rgba(10, 17, 40, 0.92);
+    backdrop-filter: blur(14px);
+    border-radius: 24px 0 0 24px;
+    box-shadow: 0 0 0 100vmax rgba(10, 17, 40, 0);
+
+    transform: translateX(100%);
+    transition:
+      transform 0.45s ease,
+      box-shadow 0.45s ease;
+  }
+
+  .navbar-right.open {
+    transform: translateX(0);
+    box-shadow: 0 0 0 100vmax rgba(10, 17, 40, 0.55);
+  }
+
+  .navbar-right a {
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(238, 229, 209, 0.12);
+  }
+
+  .navbar-right a::after {
+    display: none; /* no hover underline in the sidebar */
+  }
+
+  .navbar-right a:hover,
+  .navbar-right a:active {
+    color: #e8b830;
+  }
+}
