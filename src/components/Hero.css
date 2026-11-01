@@ -21,6 +21,8 @@
 .hero-image img {
   width: 100%;
   height: 100%;
+  /* object-fit: cover;
+  object-position: center; */
 }
 
 .hero-video .react-player {
@@ -139,14 +141,22 @@
 @media (max-width: 600px) {
   .hero {
     padding: 0 2rem;
+    min-height: 100svh; 
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 60% center; 
   }
 
   .hero::after {
     background: linear-gradient(
       to right,
-      #0a1128ee 10%,
-      #0a1128aa 65%,
-      #0a112855
+      #0a1128ee 20%,
+      #0a1128aa 50%,
+      #0a11283d
     );
   }
 

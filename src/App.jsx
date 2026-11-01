@@ -6,7 +6,7 @@ import "./App.css";
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename="/van-gogh-gallery">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/paint_details/:id" element={<PaintDetails />} />
