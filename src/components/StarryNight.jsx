@@ -1,11 +1,11 @@
-import starry_night from "../assets/Starry_Night.jpg";
-import brush from "../assets/brush.png";
+import starry_night from "../assets/Starry_Night.webp";
+import brush from "../assets/brush.webp";
 import "./StarryNight.css";
 // import { useEffect, useRef } from "react";
 // import gsap from "gsap";
 // import { ScrollTrigger } from "gsap/ScrollTrigger";
 // import { SplitText } from "gsap/SplitText";
- 
+
 function StarryNight() {
   // const containerRef = useRef(null);
 

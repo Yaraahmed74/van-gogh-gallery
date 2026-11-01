@@ -3,7 +3,7 @@ import "./Hero.css";
 import gsap from "gsap";
 import { SplitText } from "gsap/all";
 import ReactPlayer from "react-player";
-import heroBackground from "../assets/hero_background.png";
+import heroBackground from "../assets/hero_background.webp";
 
 function Hero() {
   useEffect(() => {

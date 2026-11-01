@@ -2,7 +2,7 @@ import "./Story.css";
 // import { useEffect, useRef } from "react";
 // import gsap from "gsap";
 // import { ScrollTrigger } from "gsap/ScrollTrigger";
-import van_gogh from "../assets/van_Gogh-removebg.png";
+import van_gogh from "../assets/van_Gogh-removebg.webp";
 
 function Story() {
   // const containerRefStory = useRef(null);
