@@ -1,5 +1,5 @@
 import "./Gallery.css";
-import { paints } from "./Paints.jsx";
+import { paints } from "./paints.jsx";
 import { Link } from "react-router-dom";
 
 function Gallery() {
